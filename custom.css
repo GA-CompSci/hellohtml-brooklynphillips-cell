@@ -1,23 +1,25 @@
 
 header {
-    background-image: url("http://coloradomoms.com/wp-content/uploads/2025/02/chocolate-dipped-fruit-platter.png");
+    background-image: url(https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/07/chocolate.png);
 background-position: center center;
 background-size: cover;
+box-shadow: 0px 0px 50px black;
+margin-bottom: 50px;
 }
 #hero-text {
 color: whitesmoke !important;
 font-size: 72px;
-text-shadow: 7px 7px 5px black;
+text-shadow: 5px 5px 5px red;
 }
 
 header p {
-color: greenyellow;
+color: whitesmoke;
 font-size: 24px;
 font-weight: 750 !important;
 text-shadow: 1px 1px 2px black;
 }
 header .btn {
-background-color: green;
+background-color: darkorange;
 border-color:  white;
 color: white; 
 
