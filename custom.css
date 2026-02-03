@@ -1,32 +1,128 @@
+/* ---------- Base Styles ---------- */
+body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    background-color: #faf9f7;
+    color: #2b2b2b;
+    line-height: 1.6;
+}
 
+/* ---------- Header / Hero ---------- */
 header {
-    background-image: url(https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/07/chocolate.png);
-background-position: center center;
-background-size: cover;
-box-shadow: 0px 0px 50px black;
-margin-bottom: 50px;
+    background-image: linear-gradient(
+        rgba(32, 20, 12, 0.65),
+        rgba(32, 20, 12, 0.65)
+    ),
+    url(https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2023/07/chocolate.png);
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 }
+
 #hero-text {
-color: whitesmoke !important;
-font-size: 72px;
-text-shadow: 5px 5px 5px red;
+    font-family: "DM Serif Display", serif;
+    color: #ffffff !important;
+    font-size: clamp(2.75rem, 5vw, 4.25rem);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
+
 
 header p {
-color: whitesmoke;
-font-size: 24px;
-font-weight: 750 !important;
-text-shadow: 1px 1px 2px black;
+    color: #f3f3f3;
+    font-size: 1.25rem;
+    font-weight: 500;
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    text-shadow: 0 2px 6px rgba(174, 0, 0, 0.6);
 }
+
+/* ---------- Call to Action Button ---------- */
 header .btn {
-background-color: darkorange;
-border-color:  white;
-color: white; 
+    background-color: #c46a2b;
+    color: #ffffff;
+    border: none;
 
+    padding: 0.75rem 2.25rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.25s ease;
 }
-header .btn:hover {
-background-color: brown;
-border-color:  rgb(0, 0, 0);
-color: maroon; 
 
+header .btn:hover {
+    background-color: red;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Cards ---------- */
+.card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Chocolate-tinted hover overlay */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(58, 32, 18, 0.25);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+/* ---------- Card Images ---------- */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ---------- Card Content ---------- */
+.card-body {
+    padding: 1.75rem;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3c2415;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #ffffff;
+}
+
+.footer-brand {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #6b4a2b;
 }
